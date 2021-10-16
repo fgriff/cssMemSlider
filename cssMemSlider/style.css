@@ -212,3 +212,13 @@ input[name="control"] {
     height: 40%;
   }
 }
+
+@media (max-width: 670px) {
+  .signatures__wrapper {
+    margin-right: 0;
+  }
+
+  .bullets {
+    width: 50%;
+  }
+}
