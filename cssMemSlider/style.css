@@ -194,7 +194,7 @@ input[name="control"] {
 
 @media (max-width: 768px) {
   .controls {
-    height: 70px;
+    height: 90px;
     flex-direction: column-reverse;
   }
 
