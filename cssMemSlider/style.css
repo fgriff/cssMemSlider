@@ -1,3 +1,11 @@
+:root {
+  --body-bgc: #cccccc;
+  --container-bgc: #36393f;
+  --shadow-color: #000000;
+  --main-white: #ffffff;
+  --main-blue: #71abfe;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +15,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #cccccc;
+  background-color: var(--body-bgc);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +27,7 @@ body {
   padding: 15px 30px 15px;
   margin: 0 auto;
   border-radius: 10px;
-  background-color: #36393f;
+  background-color: var(--container-bgc);
 }
 
 input[name="control"] {
@@ -32,7 +40,7 @@ input[name="control"] {
   margin: 0 auto;
   margin-top: -18px;
   border-radius: 10px;
-  box-shadow: 0px 10px 10px  #000000;
+  box-shadow: 0px 10px 10px var(--shadow-color);
   overflow: hidden;
 }
 
@@ -84,7 +92,7 @@ input[name="control"] {
   padding-left: 1px;
   font-family: "Arial";
   font-size: 22px;
-  color: #ffffff;
+  color: var(--main-white);
   transition: all .3s ease-in-out;
 }
 
@@ -106,9 +114,9 @@ input[name="control"] {
   display: block;
   width: 45%;
   height: 45%;
-  border: 3px solid #71abfe;
+  border: 3px solid var(--main-blue);
   border-radius: 50%;
-  background-color: #71abfe;
+  background-color: var(--main-blue);
   transition: all .3s ease-in-out;
 }
 
@@ -117,8 +125,8 @@ input[name="control"] {
 }
 
 .bullet:hover .bullet__inner {
-  border: 3px solid #ffffff;
-  background-color: #ffffff;
+  border: 3px solid var(--main-white);
+  background-color: var(--main-white);
 }
 
 #sl1:checked ~ .slider .slides .active {
@@ -147,7 +155,7 @@ input[name="control"] {
 #sl4:checked ~ .controls .bullets label[for="sl4"] .bullet__inner,
 #sl5:checked ~ .controls .bullets label[for="sl5"] .bullet__inner {
   background-color: transparent;
-  border: 3px solid #71abfe;
+  border: 3px solid var(--main-blue);
 }
 
 #sl1:checked ~ .controls .bullets label[for="sl1"]:hover .bullet__inner,
@@ -155,7 +163,7 @@ input[name="control"] {
 #sl3:checked ~ .controls .bullets label[for="sl3"]:hover .bullet__inner,
 #sl4:checked ~ .controls .bullets label[for="sl4"]:hover .bullet__inner,
 #sl5:checked ~ .controls .bullets label[for="sl5"]:hover .bullet__inner {
-  border-color: #ffffff;
+  border-color: var(--main-white);
 }
 
 
