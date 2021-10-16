@@ -141,26 +141,10 @@ input[name="control"] {
   margin-left: -80%;
 }
 
-#sl1:checked ~ .controls .bullets label[for="sl1"] .bullet__inner {
-  background-color: transparent;
-  border: 3px solid #71abfe;
-}
-
-#sl2:checked ~ .controls .bullets label[for="sl2"] .bullet__inner {
-  background-color: transparent;
-  border: 3px solid #71abfe;
-}
-
-#sl3:checked ~ .controls .bullets label[for="sl3"] .bullet__inner {
-  background-color: transparent;
-  border: 3px solid #71abfe;
-}
-
-#sl4:checked ~ .controls .bullets label[for="sl4"] .bullet__inner {
-  background-color: transparent;
-  border: 3px solid #71abfe;
-}
-
+#sl1:checked ~ .controls .bullets label[for="sl1"] .bullet__inner,
+#sl2:checked ~ .controls .bullets label[for="sl2"] .bullet__inner,
+#sl3:checked ~ .controls .bullets label[for="sl3"] .bullet__inner,
+#sl4:checked ~ .controls .bullets label[for="sl4"] .bullet__inner,
 #sl5:checked ~ .controls .bullets label[for="sl5"] .bullet__inner {
   background-color: transparent;
   border: 3px solid #71abfe;
