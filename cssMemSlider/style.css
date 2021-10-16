@@ -222,3 +222,14 @@ input[name="control"] {
     width: 50%;
   }
 }
+
+@media (max-width: 500px) {
+  .bullets {
+    width: 100%;
+  }
+
+  .bullet__inner {
+    width: 35%;
+    height: 35%;
+  }
+}
