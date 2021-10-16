@@ -140,3 +140,28 @@ input[name="control"] {
 #sl5:checked ~ .slider .slides .active {
   margin-left: -80%;
 }
+
+#sl1:checked ~ .controls .bullets label[for="sl1"] .bullet__inner {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+}
+
+#sl2:checked ~ .controls .bullets label[for="sl2"] .bullet__inner {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+}
+
+#sl3:checked ~ .controls .bullets label[for="sl3"] .bullet__inner {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+}
+
+#sl4:checked ~ .controls .bullets label[for="sl4"] .bullet__inner {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+}
+
+#sl5:checked ~ .controls .bullets label[for="sl5"] .bullet__inner {
+  background-color: transparent;
+  border: 3px solid #ffffff;
+}
