@@ -185,3 +185,9 @@ input[name="control"] {
 #sl5:checked ~ .controls .signatures__wrapper .signatures .active {
   margin-left: -80%;
 }
+
+@media (max-width: 853px) {
+  .signature {
+    font-size: 18px;
+  }
+}
