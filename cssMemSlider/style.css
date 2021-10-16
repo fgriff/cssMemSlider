@@ -186,7 +186,7 @@ input[name="control"] {
   margin-left: -80%;
 }
 
-@media (max-width: 853px) {
+@media (max-width: 854px) {
   .signature {
     font-size: 18px;
   }
