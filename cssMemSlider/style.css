@@ -233,3 +233,9 @@ input[name="control"] {
     height: 35%;
   }
 }
+
+@media (max-width: 390px) {
+  .signature {
+    font-size: 14px;
+  }
+}
