@@ -55,3 +55,68 @@ input[name="control"] {
   height: 100%;
   object-fit: contain;
 }
+
+.controls {
+  width: 100%;
+  height: 40px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signatures__wrapper {
+  width: 50%;
+  height: 40px;
+  overflow: hidden;
+}
+
+.signatures {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.signature {
+  display: block;
+  width: 20%;
+  padding-left: 1px;
+  font-family: "Arial";
+  font-size: 22px;
+  color: #ffffff;
+  transition: all .3s ease-in-out;
+}
+
+.bullets {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bullet {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bullet__inner {
+  display: block;
+  width: 45%;
+  height: 45%;
+  border: 3px solid #71abfe;
+  border-radius: 50%;
+  background-color: #71abfe;
+  transition: all .3s ease-in-out;
+}
+
+.bullet:hover {
+  cursor: pointer;
+}
+
+.bullet:hover .bullet__inner {
+  border: 3px solid #ffffff;
+  background-color: #ffffff;
+}
