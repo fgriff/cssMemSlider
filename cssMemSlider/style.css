@@ -165,3 +165,23 @@ input[name="control"] {
   background-color: transparent;
   border: 3px solid #ffffff;
 }
+
+#sl1:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: 0%;
+}
+
+#sl2:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: -20%;
+}
+
+#sl3:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: -40%;
+}
+
+#sl4:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: -60%;
+}
+
+#sl5:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: -80%;
+}
