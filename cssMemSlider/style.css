@@ -191,3 +191,24 @@ input[name="control"] {
     font-size: 18px;
   }
 }
+
+@media (max-width: 768px) {
+  .controls {
+    height: 70px;
+    flex-direction: column-reverse;
+  }
+
+  .signatures__wrapper {
+    width: 100%;
+  }
+
+  .bullets {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bullet__inner {
+    width: 40%;
+    height: 40%;
+  }
+}
