@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS mem slider</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <input type="radio" name="control" id="sl1" checked>
+    <input type="radio" name="control" id="sl2">
+    <input type="radio" name="control" id="sl3">
+    <input type="radio" name="control" id="sl4">
+    <input type="radio" name="control" id="sl5">
+
+    <div class="slider">
+      <div class="slides">
+        <div class="slide active"><img src="./assets/coding.jpg" alt="slide1"></div>
+        <div class="slide"><img src="./assets/announcements.jpg" alt="slide2"></div>
+        <div class="slide"><img src="./assets/anticipation.jpg" alt="slide3"></div>
+        <div class="slide"><img src="./assets/fail.jpg" alt="slide4"></div>
+        <div class="slide"><img src="./assets/directed.jpg" alt="slide5"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="signatures__wrapper">
+        <div class="signatures">
+          <span class="signature active">When you are coding and...</span>
+          <span class="signature">Notification in #announcements</span>
+          <span class="signature">Hack Pentagon? Create new Facebook?</span>
+          <span class="signature">What???</span>
+          <span class="signature">The end</span>
+        </div>
+      </div>
+      <div class="bullets">
+        <label for="sl1" class="bullet"><span class="bullet__inner"></span></label>
+        <label for="sl2" class="bullet"><span class="bullet__inner"></span></label>
+        <label for="sl3" class="bullet"><span class="bullet__inner"></span></label>
+        <label for="sl4" class="bullet"><span class="bullet__inner"></span></label>
+        <label for="sl5" class="bullet"><span class="bullet__inner"></span></label>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

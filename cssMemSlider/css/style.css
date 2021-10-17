@@ -1,0 +1,228 @@
+:root {
+  --body-bgc: #cccccc;
+  --container-bgc: #36393f;
+  --shadow-color: #000000;
+  --main-white: #ffffff;
+  --main-blue: #71abfe;
+  --border-width: 0.19rem;
+  --border-radius: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--body-bgc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 67.75rem;
+  min-width: 20rem;
+  padding: 1rem 2rem 1rem;
+  margin: 0 auto;
+  border-radius: var(--border-radius);
+  background-color: var(--container-bgc);
+}
+
+input[name="control"] {
+  visibility: hidden;
+}
+
+.slider {
+  width: 100%;
+  height: 75%;
+  margin: 0 auto;
+  margin-top: -1.2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.625rem 0.625rem var(--shadow-color);
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.controls {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signatures__wrapper {
+  width: 50%;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+.signatures {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.signature {
+  display: block;
+  width: 20%;
+  padding-left: 0.06rem;
+  font-family: "Arial";
+  font-size: 1.375rem;
+  color: var(--main-white);
+  transition: all .3s ease-in-out;
+}
+
+.bullets {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bullet {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bullet__inner {
+  display: block;
+  width: 45%;
+  height: 45%;
+  border: var(--border-width) solid var(--main-blue);
+  border-radius: 50%;
+  background-color: var(--main-blue);
+  transition: all .3s ease-in-out;
+}
+
+.bullet:hover {
+  cursor: pointer;
+}
+
+.bullet:hover .bullet__inner {
+  border: var(--border-width) solid var(--main-white);
+  background-color: var(--main-white);
+}
+
+#sl1:checked ~ .slider .slides .active,
+#sl1:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: 0;
+}
+
+#sl2:checked ~ .slider .slides .active,
+#sl2:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: -20%;
+}
+
+#sl3:checked ~ .slider .slides .active,
+#sl3:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: -40%;
+}
+
+#sl4:checked ~ .slider .slides .active,
+#sl4:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: -60%;
+}
+
+#sl5:checked ~ .slider .slides .active,
+#sl5:checked ~ .controls .signatures__wrapper .signatures .active {
+  margin-left: -80%;
+}
+
+#sl1:checked ~ .controls .bullets label[for="sl1"] .bullet__inner,
+#sl2:checked ~ .controls .bullets label[for="sl2"] .bullet__inner,
+#sl3:checked ~ .controls .bullets label[for="sl3"] .bullet__inner,
+#sl4:checked ~ .controls .bullets label[for="sl4"] .bullet__inner,
+#sl5:checked ~ .controls .bullets label[for="sl5"] .bullet__inner {
+  background-color: transparent;
+  border: var(--border-width) solid var(--main-blue);
+}
+
+#sl1:checked ~ .controls .bullets label[for="sl1"]:hover .bullet__inner,
+#sl2:checked ~ .controls .bullets label[for="sl2"]:hover .bullet__inner,
+#sl3:checked ~ .controls .bullets label[for="sl3"]:hover .bullet__inner,
+#sl4:checked ~ .controls .bullets label[for="sl4"]:hover .bullet__inner,
+#sl5:checked ~ .controls .bullets label[for="sl5"]:hover .bullet__inner {
+  border-color: var(--main-white);
+}
+
+@media (max-width: 854px) {
+  .signature {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .controls {
+    height: 5.625rem;
+    flex-direction: column-reverse;
+  }
+
+  .signatures__wrapper {
+    width: 100%;
+  }
+
+  .bullets {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bullet__inner {
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media (max-width: 670px) {
+  .signatures__wrapper {
+    margin-right: 0;
+  }
+
+  .bullets {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .bullets {
+    width: 100%;
+  }
+
+  .bullet__inner {
+    width: 35%;
+    height: 35%;
+  }
+}
+
+@media (max-width: 390px) {
+  .signature {
+    font-size: 0.875rem;
+  }
+}
