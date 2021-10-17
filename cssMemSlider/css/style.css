@@ -4,6 +4,8 @@
   --shadow-color: #000000;
   --main-white: #ffffff;
   --main-blue: #71abfe;
+  --border-width: 0.19rem;
+  --border-radius: 1rem;
 }
 
 * {
@@ -22,11 +24,11 @@ body {
 }
 
 .container {
-  max-width: 1084px;
-  min-width: 320px;
-  padding: 15px 30px 15px;
+  max-width: 67.75rem;
+  min-width: 20rem;
+  padding: 1rem 2rem 1rem;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   background-color: var(--container-bgc);
 }
 
@@ -38,9 +40,9 @@ input[name="control"] {
   width: 100%;
   height: 75%;
   margin: 0 auto;
-  margin-top: -18px;
-  border-radius: 10px;
-  box-shadow: 0px 10px 10px var(--shadow-color);
+  margin-top: -1.2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.625rem 0.625rem var(--shadow-color);
   overflow: hidden;
 }
 
@@ -66,8 +68,8 @@ input[name="control"] {
 
 .controls {
   width: 100%;
-  height: 40px;
-  margin-top: 25px;
+  height: 2.5rem;
+  margin-top: 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,7 +77,7 @@ input[name="control"] {
 
 .signatures__wrapper {
   width: 50%;
-  height: 40px;
+  height: 2.5rem;
   overflow: hidden;
 }
 
@@ -89,9 +91,9 @@ input[name="control"] {
 .signature {
   display: block;
   width: 20%;
-  padding-left: 1px;
+  padding-left: 0.06rem;
   font-family: "Arial";
-  font-size: 22px;
+  font-size: 1.375rem;
   color: var(--main-white);
   transition: all .3s ease-in-out;
 }
@@ -103,8 +105,8 @@ input[name="control"] {
 }
 
 .bullet {
-  width: 45px;
-  height: 45px;
+  width: 2.8rem;
+  height: 2.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,7 +116,7 @@ input[name="control"] {
   display: block;
   width: 45%;
   height: 45%;
-  border: 3px solid var(--main-blue);
+  border: var(--border-width) solid var(--main-blue);
   border-radius: 50%;
   background-color: var(--main-blue);
   transition: all .3s ease-in-out;
@@ -125,27 +127,32 @@ input[name="control"] {
 }
 
 .bullet:hover .bullet__inner {
-  border: 3px solid var(--main-white);
+  border: var(--border-width) solid var(--main-white);
   background-color: var(--main-white);
 }
 
-#sl1:checked ~ .slider .slides .active {
+#sl1:checked ~ .slider .slides .active,
+#sl1:checked ~ .controls .signatures__wrapper .signatures .active {
   margin-left: 0;
 }
 
-#sl2:checked ~ .slider .slides .active {
+#sl2:checked ~ .slider .slides .active,
+#sl2:checked ~ .controls .signatures__wrapper .signatures .active {
   margin-left: -20%;
 }
 
-#sl3:checked ~ .slider .slides .active {
+#sl3:checked ~ .slider .slides .active,
+#sl3:checked ~ .controls .signatures__wrapper .signatures .active {
   margin-left: -40%;
 }
 
-#sl4:checked ~ .slider .slides .active {
+#sl4:checked ~ .slider .slides .active,
+#sl4:checked ~ .controls .signatures__wrapper .signatures .active {
   margin-left: -60%;
 }
 
-#sl5:checked ~ .slider .slides .active {
+#sl5:checked ~ .slider .slides .active,
+#sl5:checked ~ .controls .signatures__wrapper .signatures .active {
   margin-left: -80%;
 }
 
@@ -155,7 +162,7 @@ input[name="control"] {
 #sl4:checked ~ .controls .bullets label[for="sl4"] .bullet__inner,
 #sl5:checked ~ .controls .bullets label[for="sl5"] .bullet__inner {
   background-color: transparent;
-  border: 3px solid var(--main-blue);
+  border: var(--border-width) solid var(--main-blue);
 }
 
 #sl1:checked ~ .controls .bullets label[for="sl1"]:hover .bullet__inner,
@@ -166,36 +173,15 @@ input[name="control"] {
   border-color: var(--main-white);
 }
 
-
-#sl1:checked ~ .controls .signatures__wrapper .signatures .active {
-  margin-left: 0%;
-}
-
-#sl2:checked ~ .controls .signatures__wrapper .signatures .active {
-  margin-left: -20%;
-}
-
-#sl3:checked ~ .controls .signatures__wrapper .signatures .active {
-  margin-left: -40%;
-}
-
-#sl4:checked ~ .controls .signatures__wrapper .signatures .active {
-  margin-left: -60%;
-}
-
-#sl5:checked ~ .controls .signatures__wrapper .signatures .active {
-  margin-left: -80%;
-}
-
 @media (max-width: 854px) {
   .signature {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 @media (max-width: 768px) {
   .controls {
-    height: 90px;
+    height: 5.625rem;
     flex-direction: column-reverse;
   }
 
@@ -237,6 +223,6 @@ input[name="control"] {
 
 @media (max-width: 390px) {
   .signature {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
